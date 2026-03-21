@@ -112,13 +112,13 @@ export default function Details() {
           <Text className="text-gray-400 text-xs font-bold uppercase tracking-widest mb-2">
             About
           </Text>
-          <Text className="text-gray-600 text-base leading-relaxed">
+          <Text className="text-gray-600 text-base overflow-y-auto leading-relaxed">
             {pokemonDetails ?? "Loading..."}
           </Text>
         </View>
 
         {/* Back link — simple, understated */}
-          <Link href={{ pathname: "/deepDetail", params: { name: params.name, image: params.image, type: params.type } }}
+          <Link href={{ pathname: "/tabs/deepDetail", params: { name: params.name, image: params.image, type: params.type, details: pokemonDetails } }}
              className="mt-6 bg-red-500 text-white text-base font-bold text-center py-4 rounded-2xl overflow-hidden"
           >
            View Full Details
